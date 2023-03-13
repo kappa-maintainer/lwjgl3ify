@@ -20,19 +20,10 @@ public class IMEHelper {
             IMEWrapperTextField.instance.setVisible(true);
             return;
         }
-        if (IMEWrapperBook.instance.isVisible()) {
-            IMEWrapperBook.instance.setVisible(false);
-            IMEWrapperBook.instance.setVisible(true);
-            return;
-        }
-        if (IMEWrapperSign.instance.isVisible()) {
-            IMEWrapperSign.instance.setVisible(false);
-            IMEWrapperSign.instance.setVisible(true);
-        }
     }
 
     public static boolean isAnyWrapperVisible() {
-        return IMEWrapperBook.instance.isVisible() || IMEWrapperSign.instance.isVisible() || IMEWrapperTextField.instance.isVisible();
+        return IMEWrapperTextField.instance.isVisible();
     }
 
     /*

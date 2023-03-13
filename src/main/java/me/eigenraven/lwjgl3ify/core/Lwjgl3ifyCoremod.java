@@ -113,15 +113,9 @@ public class Lwjgl3ifyCoremod implements IFMLLoadingPlugin, IEarlyMixinLoader {
         mixins.add("fml.ObjectHolderRef");
         mixins.add("fml.ObjectHolderRegistry");
         if (FMLLaunchHandler.side().isClient()) {
-            if (Config.IME_WRAPPER) {
-                mixins.add("game.ime.IMixinGuiEditSign");
+            if (Config.MIXIN_IME_WRAPPER) {
                 mixins.add("game.ime.IMixinGuiScreen");
-                mixins.add("game.ime.IMixinGuiScreenBook");
                 mixins.add("game.ime.MixinEntityRenderer");
-                mixins.add("game.ime.MixinFontRenderer");
-                mixins.add("game.ime.MixinGuiEditSign");
-                mixins.add("game.ime.MixinGuiRepair");
-                mixins.add("game.ime.MixinGuiScreenBook");
                 mixins.add("game.ime.MixinGuiTextField");
                 mixins.add("game.ime.MixinMinecraft");
             }
